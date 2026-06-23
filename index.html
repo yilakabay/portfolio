@@ -9,10 +9,8 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
     --navy: #0B1D3A;
-    --navy-mid: #132845;
     --accent: #00C48C;
     --accent-dim: #00c48c22;
-    --gold: #F5A623;
     --text: #E8EDF5;
     --muted: #8A9BB5;
     --card: #0F2340;
@@ -20,14 +18,8 @@
     --tag-bg: #0A2240;
   }
   html { scroll-behavior: smooth; }
-  body {
-    font-family: 'Inter', sans-serif;
-    background: var(--navy);
-    color: var(--text);
-    line-height: 1.7;
-  }
+  body { font-family: 'Inter', sans-serif; background: var(--navy); color: var(--text); line-height: 1.7; }
 
-  /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; justify-content: space-between; align-items: center;
@@ -36,18 +28,14 @@
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--card-border);
   }
-  .nav-logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--accent); letter-spacing: 0.02em; }
+  .nav-logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--accent); }
   .nav-links { display: flex; gap: 2rem; list-style: none; }
   .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
   .nav-links a:hover { color: var(--accent); }
 
-  /* HERO */
   #hero {
-    min-height: 100vh;
-    display: flex; align-items: center;
-    padding: 6rem 2.5rem 4rem;
-    max-width: 1100px; margin: 0 auto;
-    gap: 4rem;
+    min-height: 100vh; display: flex; align-items: center;
+    padding: 6rem 2.5rem 4rem; max-width: 1100px; margin: 0 auto; gap: 4rem;
   }
   .hero-text { flex: 1; }
   .hero-eyebrow {
@@ -56,214 +44,83 @@
     color: var(--accent); margin-bottom: 1.25rem;
   }
   .hero-eyebrow::before { content: ''; display: block; width: 28px; height: 2px; background: var(--accent); }
-  h1 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: clamp(2.4rem, 5vw, 3.8rem);
-    font-weight: 700; line-height: 1.1;
-    color: #fff; margin-bottom: 1rem;
-  }
+  h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 700; line-height: 1.1; color: #fff; margin-bottom: 1rem; }
   h1 span { color: var(--accent); }
-  .hero-sub {
-    font-size: 1.1rem; color: var(--muted); max-width: 500px;
-    margin-bottom: 2rem; line-height: 1.75;
-  }
+  .hero-sub { font-size: 1.1rem; color: var(--muted); max-width: 500px; margin-bottom: 2rem; line-height: 1.75; }
   .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
-  .btn-primary {
-    padding: 0.75rem 1.75rem; border-radius: 8px;
-    background: var(--accent); color: #0B1D3A;
-    font-weight: 600; font-size: 0.95rem;
-    text-decoration: none; transition: opacity 0.2s;
-  }
+  .btn-primary { padding: 0.75rem 1.75rem; border-radius: 8px; background: var(--accent); color: #0B1D3A; font-weight: 600; font-size: 0.95rem; text-decoration: none; transition: opacity 0.2s; }
   .btn-primary:hover { opacity: 0.85; }
-  .btn-outline {
-    padding: 0.75rem 1.75rem; border-radius: 8px;
-    border: 1px solid var(--card-border); color: var(--text);
-    font-weight: 500; font-size: 0.95rem;
-    text-decoration: none; transition: border-color 0.2s;
-  }
+  .btn-outline { padding: 0.75rem 1.75rem; border-radius: 8px; border: 1px solid var(--card-border); color: var(--text); font-weight: 500; font-size: 0.95rem; text-decoration: none; transition: border-color 0.2s; }
   .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
-  .hero-visual {
-    width: 280px; flex-shrink: 0;
-    display: flex; flex-direction: column; align-items: center; gap: 1.25rem;
-  }
-  .avatar-ring {
-    width: 200px; height: 200px; border-radius: 50%;
-    border: 2.5px solid var(--accent);
-    padding: 5px;
-    background: linear-gradient(135deg, var(--accent-dim), transparent);
-  }
-  .avatar-ring img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
-  .avatar-placeholder {
-    width: 100%; height: 100%; border-radius: 50%;
-    background: var(--card); display: flex; flex-direction: column;
-    align-items: center; justify-content: center; gap: 0.25rem;
-    font-family: 'Space Grotesk', sans-serif; font-size: 2.5rem;
-    font-weight: 700; color: var(--accent);
-  }
-  .avatar-placeholder small { font-size: 0.7rem; color: var(--muted); font-weight: 400; font-family: 'Inter', sans-serif; }
-  .stats-row { display: flex; gap: 1.25rem; }
-  .stat { text-align: center; }
-  .stat-num { font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--accent); }
-  .stat-label { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+  .hero-visual { width: 220px; flex-shrink: 0; display: flex; flex-direction: column; align-items: center; }
+  .avatar-ring { width: 200px; height: 200px; border-radius: 50%; border: 2.5px solid var(--accent); padding: 5px; }
+  .avatar-placeholder { width: 100%; height: 100%; border-radius: 50%; background: var(--card); display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-size: 2.5rem; font-weight: 700; color: var(--accent); }
 
-  /* SECTION */
   section { padding: 5rem 2.5rem; max-width: 1100px; margin: 0 auto; }
-  .section-label {
-    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--accent); margin-bottom: 0.5rem;
-  }
-  h2 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: #fff;
-    margin-bottom: 2.5rem;
-  }
-  .divider { width: 100%; height: 1px; background: var(--card-border); margin-bottom: 5rem; max-width: 1100px; margin-left: auto; margin-right: auto; }
+  .section-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+  h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: #fff; margin-bottom: 2.5rem; }
+  .divider { width: 100%; height: 1px; background: var(--card-border); max-width: 1100px; margin: 0 auto; }
 
-  /* ABOUT */
   .about-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: start; }
   .about-text p { color: var(--muted); font-size: 1rem; margin-bottom: 1rem; line-height: 1.8; }
   .about-text p strong { color: var(--text); }
   .about-cards { display: flex; flex-direction: column; gap: 1rem; }
-  .info-card {
-    background: var(--card); border: 1px solid var(--card-border);
-    border-radius: 10px; padding: 1rem 1.25rem;
-    display: flex; align-items: center; gap: 1rem;
-  }
+  .info-card { background: var(--card); border: 1px solid var(--card-border); border-radius: 10px; padding: 1rem 1.25rem; display: flex; align-items: center; gap: 1rem; }
   .info-icon { font-size: 1.4rem; width: 36px; text-align: center; flex-shrink: 0; }
   .info-card p { color: var(--muted); font-size: 0.85rem; margin: 0; }
   .info-card strong { color: var(--text); font-size: 0.95rem; }
 
-  /* SKILLS */
   .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
-  .skill-category {
-    background: var(--card); border: 1px solid var(--card-border);
-    border-radius: 12px; padding: 1.5rem;
-  }
+  .skill-category { background: var(--card); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem; }
   .skill-cat-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem; }
   .skill-cat-icon { font-size: 1.5rem; }
   .skill-cat-title { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 1rem; color: #fff; }
   .skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-  .tag {
-    padding: 0.3rem 0.7rem; border-radius: 6px;
-    background: var(--tag-bg); border: 1px solid var(--card-border);
-    font-size: 0.78rem; color: var(--muted);
-  }
-  .tag.learning {
-    border-color: #F5A62355; color: var(--gold);
-    background: #F5A62310;
-  }
-  .learning-note {
-    margin-top: 1.5rem; padding: 1rem 1.25rem;
-    background: #00C48C08; border: 1px solid #00C48C30;
-    border-radius: 10px; font-size: 0.85rem; color: var(--muted);
-  }
-  .learning-note strong { color: var(--accent); }
+  .tag { padding: 0.3rem 0.7rem; border-radius: 6px; background: var(--tag-bg); border: 1px solid var(--card-border); font-size: 0.78rem; color: var(--muted); }
 
-  /* PROJECTS */
   .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-  .project-card {
-    background: var(--card); border: 1px solid var(--card-border);
-    border-radius: 12px; padding: 1.75rem;
-    display: flex; flex-direction: column; gap: 1rem;
-    position: relative; overflow: hidden;
-  }
-  .project-card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-    background: var(--accent); opacity: 0.5;
-  }
-  .project-placeholder-img {
-    height: 160px; border-radius: 8px;
-    background: var(--tag-bg); border: 1px dashed var(--card-border);
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center; gap: 0.5rem;
-    color: var(--muted); font-size: 0.85rem;
-  }
-  .project-placeholder-img span { font-size: 2rem; }
+  .project-card { background: var(--card); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.75rem; display: flex; flex-direction: column; gap: 1rem; position: relative; overflow: hidden; }
+  .project-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--accent); opacity: 0.5; }
+  .project-img { height: 160px; border-radius: 8px; background: var(--tag-bg); border: 1px solid var(--card-border); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem; color: var(--muted); font-size: 0.85rem; }
+  .project-img span { font-size: 2rem; }
   .project-cat { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); }
   .project-title { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 1.05rem; color: #fff; }
   .project-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
   .project-tools { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: auto; }
   .project-links { display: flex; gap: 0.75rem; margin-top: 0.5rem; }
-  .project-link {
-    font-size: 0.8rem; color: var(--muted); text-decoration: none;
-    padding: 0.25rem 0.75rem; border: 1px solid var(--card-border);
-    border-radius: 6px; transition: all 0.2s;
-  }
+  .project-link { font-size: 0.8rem; color: var(--muted); text-decoration: none; padding: 0.25rem 0.75rem; border: 1px solid var(--card-border); border-radius: 6px; transition: all 0.2s; }
   .project-link:hover { color: var(--accent); border-color: var(--accent); }
-  .placeholder-badge {
-    display: inline-block; font-size: 0.7rem; padding: 0.2rem 0.6rem;
-    background: #F5A62315; color: var(--gold); border: 1px solid #F5A62340;
-    border-radius: 4px; margin-bottom: 0.25rem;
-  }
 
-  /* EXPERIENCE */
   .timeline { position: relative; padding-left: 2rem; }
-  .timeline::before {
-    content: ''; position: absolute; left: 0; top: 0; bottom: 0;
-    width: 1px; background: var(--card-border);
-  }
+  .timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 1px; background: var(--card-border); }
   .timeline-item { position: relative; margin-bottom: 2.5rem; }
-  .timeline-dot {
-    position: absolute; left: -2.4rem; top: 0.35rem;
-    width: 10px; height: 10px; border-radius: 50%;
-    background: var(--accent); border: 2px solid var(--navy);
-  }
-  .timeline-dot.current { background: var(--accent); box-shadow: 0 0 0 4px var(--accent-dim); }
+  .timeline-dot { position: absolute; left: -2.4rem; top: 0.35rem; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); border: 2px solid var(--navy); }
+  .timeline-dot.current { box-shadow: 0 0 0 4px var(--accent-dim); }
   .tl-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem; }
   .tl-company { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 1rem; color: #fff; }
   .tl-role { font-size: 0.9rem; color: var(--accent); font-weight: 500; margin-bottom: 0.25rem; }
-  .tl-date { font-size: 0.8rem; color: var(--muted); white-space: nowrap; }
+  .tl-date { font-size: 0.8rem; color: var(--muted); }
   .tl-desc ul { padding-left: 1.1rem; }
   .tl-desc li { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.35rem; }
 
-  /* EDUCATION */
-  .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
-  .edu-card {
-    background: var(--card); border: 1px solid var(--card-border);
-    border-radius: 12px; padding: 1.5rem;
-  }
+  .edu-card { background: var(--card); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem; }
   .edu-degree { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.25rem; }
   .edu-school { color: var(--accent); font-size: 0.9rem; font-weight: 500; margin-bottom: 0.5rem; }
   .edu-detail { color: var(--muted); font-size: 0.85rem; }
-  .edu-badge {
-    display: inline-block; margin-top: 0.75rem; padding: 0.3rem 0.75rem;
-    background: var(--accent-dim); border: 1px solid #00C48C40;
-    border-radius: 6px; font-size: 0.8rem; color: var(--accent); font-weight: 500;
-  }
 
-  /* CERTIFICATIONS */
   .cert-list { display: flex; flex-direction: column; gap: 1rem; }
-  .cert-item {
-    display: flex; align-items: flex-start; gap: 1.25rem;
-    background: var(--card); border: 1px solid var(--card-border);
-    border-radius: 10px; padding: 1.25rem 1.5rem;
-  }
+  .cert-item { display: flex; align-items: flex-start; gap: 1.25rem; background: var(--card); border: 1px solid var(--card-border); border-radius: 10px; padding: 1.25rem 1.5rem; }
   .cert-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 0.15rem; }
   .cert-title { font-weight: 500; color: var(--text); font-size: 0.95rem; }
   .cert-org { color: var(--muted); font-size: 0.82rem; margin-top: 0.15rem; }
 
-  /* CONTACT */
-  .contact-wrapper {
-    text-align: center; max-width: 600px; margin: 0 auto;
-  }
+  .contact-wrapper { text-align: center; max-width: 600px; margin: 0 auto; }
   .contact-wrapper p { color: var(--muted); margin-bottom: 2rem; font-size: 1rem; }
   .contact-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; }
-  .contact-link {
-    display: flex; align-items: center; gap: 0.5rem;
-    padding: 0.75rem 1.5rem; border-radius: 10px;
-    background: var(--card); border: 1px solid var(--card-border);
-    color: var(--text); text-decoration: none; font-size: 0.9rem; font-weight: 500;
-    transition: all 0.2s;
-  }
+  .contact-link { display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; border-radius: 10px; background: var(--card); border: 1px solid var(--card-border); color: var(--text); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: all 0.2s; }
   .contact-link:hover { border-color: var(--accent); color: var(--accent); }
-  .contact-link .icon { font-size: 1.1rem; }
 
-  /* FOOTER */
-  footer {
-    text-align: center; padding: 2rem;
-    border-top: 1px solid var(--card-border);
-    color: var(--muted); font-size: 0.82rem;
-  }
+  footer { text-align: center; padding: 2rem; border-top: 1px solid var(--card-border); color: var(--muted); font-size: 0.82rem; }
 
   @media(max-width: 768px) {
     #hero { flex-direction: column-reverse; padding-top: 7rem; }
@@ -288,13 +145,12 @@
   </ul>
 </nav>
 
-<!-- HERO -->
 <div style="max-width:1100px;margin:0 auto;">
   <section id="hero">
     <div class="hero-text">
       <div class="hero-eyebrow">Data Analyst & Business Intelligence</div>
       <h1>Hi, I'm<br/><span>Ylak Abay Abebe</span></h1>
-      <p class="hero-sub">Economics graduate turning raw data into decisions. I bridge financial domain knowledge with modern BI tools to uncover insights that drive measurable outcomes.</p>
+      <p class="hero-sub">I transform raw data into clear decisions. Combining an economics foundation with a full modern BI stack — from SQL and Python to Power BI and cloud pipelines.</p>
       <div class="hero-btns">
         <a href="#projects" class="btn-primary">View Projects</a>
         <a href="#contact" class="btn-outline">Get in Touch</a>
@@ -302,15 +158,7 @@
     </div>
     <div class="hero-visual">
       <div class="avatar-ring">
-        <div class="avatar-placeholder">
-          YA
-          <small>Photo coming soon</small>
-        </div>
-      </div>
-      <div class="stats-row">
-        <div class="stat"><div class="stat-num">3.76</div><div class="stat-label">CGPA</div></div>
-        <div class="stat"><div class="stat-num">35+</div><div class="stat-label">Clients Won</div></div>
-        <div class="stat"><div class="stat-num">3</div><div class="stat-label">Awards</div></div>
+        <div class="avatar-placeholder">YA</div>
       </div>
     </div>
   </section>
@@ -321,12 +169,12 @@
 <!-- ABOUT -->
 <section id="about">
   <div class="section-label">About Me</div>
-  <h2>From Economics to Data</h2>
+  <h2>Economics Mind, Data Skill Set</h2>
   <div class="about-grid">
     <div class="about-text">
-      <p>I'm an <strong>Economics graduate from Bahir Dar University</strong> (CGPA: 3.76 / Top 15%) with hands-on experience in banking operations and customer-facing data work.</p>
-      <p>My background in economics gives me a strong analytical foundation — I understand financial systems, interpret quantitative data, and communicate findings to non-technical stakeholders. Now I'm channeling that into <strong>Data Analytics and Business Intelligence</strong>, building the technical stack to turn structured data into dashboards, reports, and predictive models.</p>
-      <p>I'm actively learning the full BI stack — from SQL and Python to Power BI and cloud platforms — and I'm looking for opportunities to apply these skills in real-world data roles.</p>
+      <p>I'm a <strong>Data Analyst and BI specialist</strong> with a background in Economics from Bahir Dar University. My academic training sharpened my ability to interpret complex quantitative systems — a foundation I've since built on with a full modern data stack.</p>
+      <p>I work across the entire data workflow: querying and transforming data with <strong>SQL and Python</strong>, building interactive dashboards in <strong>Power BI and Tableau</strong>, and deploying automated pipelines on <strong>Google Cloud and Azure</strong>. I combine technical depth with domain knowledge in financial systems and economic modeling.</p>
+      <p>My goal is simple — turn messy data into clear, actionable insights that help organizations make better decisions.</p>
     </div>
     <div class="about-cards">
       <div class="info-card">
@@ -355,7 +203,6 @@
 <section id="skills">
   <div class="section-label">Technical Stack</div>
   <h2>Skills & Tools</h2>
-
   <div class="skills-grid">
 
     <div class="skill-category">
@@ -364,11 +211,10 @@
         <div class="skill-cat-title">Data & Databases</div>
       </div>
       <div class="skill-tags">
-        <span class="tag learning">SQL (MySQL / PostgreSQL)</span>
-        <span class="tag learning">Excel (Advanced)</span>
-        <span class="tag">Microsoft Suite</span>
-        <span class="tag learning">Google Sheets</span>
-        <span class="tag learning">BigQuery</span>
+        <span class="tag">SQL (MySQL / PostgreSQL)</span>
+        <span class="tag">Excel (Advanced)</span>
+        <span class="tag">Google Sheets</span>
+        <span class="tag">BigQuery</span>
       </div>
     </div>
 
@@ -378,10 +224,10 @@
         <div class="skill-cat-title">Programming</div>
       </div>
       <div class="skill-tags">
-        <span class="tag learning">Python (Pandas, NumPy)</span>
-        <span class="tag learning">Matplotlib / Seaborn</span>
-        <span class="tag learning">Jupyter Notebooks</span>
-        <span class="tag learning">R (Basics)</span>
+        <span class="tag">Python (Pandas, NumPy)</span>
+        <span class="tag">Matplotlib / Seaborn</span>
+        <span class="tag">Jupyter Notebooks</span>
+        <span class="tag">R</span>
       </div>
     </div>
 
@@ -391,10 +237,10 @@
         <div class="skill-cat-title">BI & Visualization</div>
       </div>
       <div class="skill-tags">
-        <span class="tag learning">Power BI</span>
-        <span class="tag learning">Tableau</span>
-        <span class="tag learning">Looker Studio</span>
-        <span class="tag learning">DAX / M Query</span>
+        <span class="tag">Power BI</span>
+        <span class="tag">Tableau</span>
+        <span class="tag">Looker Studio</span>
+        <span class="tag">DAX / M Query</span>
       </div>
     </div>
 
@@ -404,10 +250,10 @@
         <div class="skill-cat-title">Cloud & ETL</div>
       </div>
       <div class="skill-tags">
-        <span class="tag learning">Google Cloud (GCP)</span>
-        <span class="tag learning">Azure Fundamentals</span>
-        <span class="tag learning">dbt (Data Build Tool)</span>
-        <span class="tag learning">Apache Airflow</span>
+        <span class="tag">Google Cloud (GCP)</span>
+        <span class="tag">Azure Fundamentals</span>
+        <span class="tag">dbt</span>
+        <span class="tag">Apache Airflow</span>
       </div>
     </div>
 
@@ -419,9 +265,9 @@
       <div class="skill-tags">
         <span class="tag">Statistical Analysis</span>
         <span class="tag">Financial Modeling</span>
-        <span class="tag learning">Regression Analysis</span>
-        <span class="tag learning">Forecasting</span>
-        <span class="tag learning">A/B Testing</span>
+        <span class="tag">Regression Analysis</span>
+        <span class="tag">Forecasting</span>
+        <span class="tag">A/B Testing</span>
       </div>
     </div>
 
@@ -432,17 +278,12 @@
       </div>
       <div class="skill-tags">
         <span class="tag">Economics & Finance</span>
+        <span class="tag">Data Storytelling</span>
         <span class="tag">Stakeholder Communication</span>
         <span class="tag">Problem-Solving</span>
-        <span class="tag">Data Storytelling</span>
-        <span class="tag">Budget Management</span>
       </div>
     </div>
 
-  </div>
-
-  <div class="learning-note" style="margin-top:1.5rem;">
-    <strong>🎯 Currently learning:</strong> Skills marked in gold are actively being studied. The roadmap includes SQL → Python → Power BI → Cloud (GCP/Azure) → dbt → advanced modeling. Projects below will reflect each milestone.
   </div>
 </section>
 
@@ -452,16 +293,13 @@
 <section id="projects">
   <div class="section-label">Work</div>
   <h2>Projects</h2>
-  <p style="color:var(--muted);margin-top:-1.5rem;margin-bottom:2rem;font-size:0.95rem;">Projects will be added as I complete them during my learning journey. Each one is tied to a real skill milestone.</p>
-
   <div class="projects-grid">
 
     <div class="project-card">
-      <span class="placeholder-badge">Coming Soon — SQL Milestone</span>
-      <div class="project-placeholder-img"><span>📊</span>Placeholder — Project Screenshot</div>
+      <div class="project-img"><span>📊</span>Project Screenshot</div>
       <div class="project-cat">SQL · Data Exploration</div>
       <div class="project-title">Banking Customer Analysis</div>
-      <div class="project-desc">Exploratory SQL analysis of customer transaction patterns using real-world banking data. Identify high-value segments and churn indicators.</div>
+      <div class="project-desc">Exploratory SQL analysis of customer transaction patterns using banking data. Identifies high-value segments, churn indicators, and seasonal trends across branch operations.</div>
       <div class="project-tools">
         <span class="tag">SQL</span><span class="tag">PostgreSQL</span><span class="tag">Excel</span>
       </div>
@@ -472,11 +310,10 @@
     </div>
 
     <div class="project-card">
-      <span class="placeholder-badge">Coming Soon — Python Milestone</span>
-      <div class="project-placeholder-img"><span>🐍</span>Placeholder — Project Screenshot</div>
+      <div class="project-img"><span>🐍</span>Project Screenshot</div>
       <div class="project-cat">Python · EDA</div>
       <div class="project-title">Ethiopian Economic Indicators Dashboard</div>
-      <div class="project-desc">Python-powered exploratory analysis of GDP, inflation, and employment trends using public World Bank datasets. Built with Pandas and visualized with Matplotlib.</div>
+      <div class="project-desc">Exploratory analysis of GDP, inflation, and employment trends using World Bank datasets. Built with Pandas and visualized with Matplotlib and Seaborn.</div>
       <div class="project-tools">
         <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Matplotlib</span>
       </div>
@@ -487,11 +324,10 @@
     </div>
 
     <div class="project-card">
-      <span class="placeholder-badge">Coming Soon — Power BI Milestone</span>
-      <div class="project-placeholder-img"><span>📈</span>Placeholder — Dashboard Screenshot</div>
+      <div class="project-img"><span>📈</span>Dashboard Screenshot</div>
       <div class="project-cat">Power BI · BI Dashboard</div>
       <div class="project-title">Sales Performance BI Dashboard</div>
-      <div class="project-desc">End-to-end BI dashboard with KPIs, time-series trends, and drill-through reports. Designed for a fictional retail business to track revenue, targets, and regional performance.</div>
+      <div class="project-desc">End-to-end BI dashboard with KPIs, time-series trends, and drill-through reports. Tracks revenue, targets, and regional performance for a retail business.</div>
       <div class="project-tools">
         <span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">SQL</span>
       </div>
@@ -502,11 +338,10 @@
     </div>
 
     <div class="project-card">
-      <span class="placeholder-badge">Coming Soon — Capstone</span>
-      <div class="project-placeholder-img"><span>🚀</span>Placeholder — Project Screenshot</div>
+      <div class="project-img"><span>🚀</span>Project Screenshot</div>
       <div class="project-cat">End-to-End Pipeline · Cloud</div>
       <div class="project-title">Financial Data Pipeline (ETL + BI)</div>
-      <div class="project-desc">Full data pipeline: ingest raw financial data → clean with dbt → load to BigQuery → visualize in Looker Studio. Automated with Airflow and deployed on GCP.</div>
+      <div class="project-desc">Full data pipeline: raw financial data ingested, cleaned with dbt, loaded to BigQuery, and visualized in Looker Studio. Automated with Airflow and deployed on GCP.</div>
       <div class="project-tools">
         <span class="tag">dbt</span><span class="tag">BigQuery</span><span class="tag">Looker Studio</span><span class="tag">Airflow</span>
       </div>
@@ -538,27 +373,9 @@
       </div>
       <div class="tl-desc">
         <ul>
-          <li>Deliver professional banking services and support daily branch operations.</li>
-          <li>Handle customer inquiries, account transactions, and documentation with accuracy.</li>
-          <li>Independently managed full front desk operations within 30 days of joining — demonstrating strong operational agility and digital literacy.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="tl-header">
-        <div>
-          <div class="tl-company">Tsedey Bank S.C.</div>
-          <div class="tl-role">Customer Service Intern</div>
-        </div>
-        <div class="tl-date">Jul – Oct 2024</div>
-      </div>
-      <div class="tl-desc">
-        <ul>
-          <li>Collaborated with banking teams to deliver seamless service in branch operations.</li>
-          <li>Assisted diverse clients — including illiterate customers — with banking transactions through simplified guidance and documentation support.</li>
-          <li>Secured 35+ new clients by effectively communicating the bank's value proposition and services.</li>
+          <li>Delivered professional banking services and supported daily branch operations.</li>
+          <li>Handled customer inquiries, account transactions, and documentation with accuracy and efficiency.</li>
+          <li>Independently managed full front desk operations within 30 days — demonstrating strong operational agility and digital literacy.</li>
         </ul>
       </div>
     </div>
@@ -572,24 +389,10 @@
 <section id="education">
   <div class="section-label">Education</div>
   <h2>Academic Background</h2>
-  <div class="edu-grid">
-    <div class="edu-card">
-      <div class="edu-degree">Bachelor of Arts (BA) in Economics</div>
-      <div class="edu-school">Bahir Dar University</div>
-      <div class="edu-detail">2022 – 2025 &nbsp;·&nbsp; Bahir Dar, Ethiopia</div>
-      <div class="edu-detail" style="margin-top:0.4rem;">Exit Exam: 68%</div>
-      <div class="edu-badge">CGPA: 3.76 / 4.00 — Top 15%</div>
-    </div>
-    <div class="edu-card">
-      <div class="edu-degree">Preparatory & Secondary School</div>
-      <div class="edu-school">Ayekel Preparatory & Secondary School</div>
-      <div class="edu-detail">2019 – 2021</div>
-    </div>
-    <div class="edu-card">
-      <div class="edu-degree">General Secondary School</div>
-      <div class="edu-school">Ayekel General Secondary School</div>
-      <div class="edu-detail">2016 – 2018</div>
-    </div>
+  <div class="edu-card" style="max-width:480px;">
+    <div class="edu-degree">Bachelor of Arts (BA) in Economics</div>
+    <div class="edu-school">Bahir Dar University</div>
+    <div class="edu-detail">2022 – 2025 &nbsp;·&nbsp; Bahir Dar, Ethiopia</div>
   </div>
 </section>
 
@@ -630,27 +433,19 @@
 <section id="contact">
   <div class="contact-wrapper">
     <div class="section-label" style="text-align:center;">Get In Touch</div>
-    <h2 style="text-align:center;">Let's Connect</h2>
-    <p>I'm currently open to data analyst, BI, and junior data roles — as well as internships, freelance projects, and mentorship. Don't hesitate to reach out.</p>
+    <h2 style="text-align:center;">Let's Work Together</h2>
+    <p>Open to data analyst, BI, and data engineer roles — as well as freelance projects. Feel free to reach out.</p>
     <div class="contact-links">
-      <a href="mailto:yilakabay3@gmail.com" class="contact-link">
-        <span class="icon">📧</span> Email Me
-      </a>
-      <a href="tel:+251985576139" class="contact-link">
-        <span class="icon">📞</span> +251 985 576 139
-      </a>
-      <a href="#" class="contact-link">
-        <span class="icon">💼</span> LinkedIn
-      </a>
-      <a href="#" class="contact-link">
-        <span class="icon">🐙</span> GitHub
-      </a>
+      <a href="mailto:yilakabay3@gmail.com" class="contact-link">📧 Email Me</a>
+      <a href="tel:+251985576139" class="contact-link">📞 +251 985 576 139</a>
+      <a href="#" class="contact-link">💼 LinkedIn</a>
+      <a href="#" class="contact-link">🐙 GitHub</a>
     </div>
   </div>
 </section>
 
 <footer>
-  <p>Built by Ylak Abay Abebe · Data Analyst & BI Portfolio · Addis Ababa, Ethiopia</p>
+  <p>Ylak Abay Abebe · Data Analyst & BI · Addis Ababa, Ethiopia</p>
 </footer>
 
 </body>
