@@ -103,16 +103,10 @@
   .tl-desc ul { padding-left: 1.1rem; }
   .tl-desc li { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.35rem; }
 
-  .edu-card { background: var(--card); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem; }
+  .edu-card { background: var(--card); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem; max-width: 480px; }
   .edu-degree { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.25rem; }
   .edu-school { color: var(--accent); font-size: 0.9rem; font-weight: 500; margin-bottom: 0.5rem; }
   .edu-detail { color: var(--muted); font-size: 0.85rem; }
-
-  .cert-list { display: flex; flex-direction: column; gap: 1rem; }
-  .cert-item { display: flex; align-items: flex-start; gap: 1.25rem; background: var(--card); border: 1px solid var(--card-border); border-radius: 10px; padding: 1.25rem 1.5rem; }
-  .cert-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 0.15rem; }
-  .cert-title { font-weight: 500; color: var(--text); font-size: 0.95rem; }
-  .cert-org { color: var(--muted); font-size: 0.82rem; margin-top: 0.15rem; }
 
   .contact-wrapper { text-align: center; max-width: 600px; margin: 0 auto; }
   .contact-wrapper p { color: var(--muted); margin-bottom: 2rem; font-size: 1rem; }
@@ -150,7 +144,7 @@
     <div class="hero-text">
       <div class="hero-eyebrow">Data Analyst & Business Intelligence</div>
       <h1>Hi, I'm<br/><span>Ylak Abay Abebe</span></h1>
-      <p class="hero-sub">I transform raw data into clear decisions. Combining an economics foundation with a full modern BI stack — from SQL and Python to Power BI and cloud pipelines.</p>
+      <p class="hero-sub">I turn raw data into clear business decisions. Specializing in data analysis, visualization, and BI dashboards that help organizations understand what their numbers are really saying.</p>
       <div class="hero-btns">
         <a href="#projects" class="btn-primary">View Projects</a>
         <a href="#contact" class="btn-outline">Get in Touch</a>
@@ -172,9 +166,9 @@
   <h2>Economics Mind, Data Skill Set</h2>
   <div class="about-grid">
     <div class="about-text">
-      <p>I'm a <strong>Data Analyst and BI specialist</strong> with a background in Economics from Bahir Dar University. My academic training sharpened my ability to interpret complex quantitative systems — a foundation I've since built on with a full modern data stack.</p>
-      <p>I work across the entire data workflow: querying and transforming data with <strong>SQL and Python</strong>, building interactive dashboards in <strong>Power BI and Tableau</strong>, and deploying automated pipelines on <strong>Google Cloud and Azure</strong>. I combine technical depth with domain knowledge in financial systems and economic modeling.</p>
-      <p>My goal is simple — turn messy data into clear, actionable insights that help organizations make better decisions.</p>
+      <p>I'm a <strong>Data Analyst and BI specialist</strong> with a background in Economics from Bahir Dar University. My academic training gave me a strong foundation in quantitative thinking, financial systems, and interpreting complex data — skills that translate directly into data work.</p>
+      <p>I specialize in the full analysis workflow: cleaning and querying data with <strong>SQL and Python</strong>, uncovering trends and patterns through exploratory analysis, and presenting findings through interactive dashboards in <strong>Power BI and Tableau</strong>.</p>
+      <p>My edge is combining technical analysis with domain knowledge in economics and finance — I don't just build charts, I understand the business context behind the numbers.</p>
     </div>
     <div class="about-cards">
       <div class="info-card">
@@ -208,7 +202,7 @@
     <div class="skill-category">
       <div class="skill-cat-header">
         <div class="skill-cat-icon">🗄️</div>
-        <div class="skill-cat-title">Data & Databases</div>
+        <div class="skill-cat-title">Data & Querying</div>
       </div>
       <div class="skill-tags">
         <span class="tag">SQL (MySQL / PostgreSQL)</span>
@@ -221,39 +215,28 @@
     <div class="skill-category">
       <div class="skill-cat-header">
         <div class="skill-cat-icon">🐍</div>
-        <div class="skill-cat-title">Programming</div>
+        <div class="skill-cat-title">Python for Analysis</div>
       </div>
       <div class="skill-tags">
-        <span class="tag">Python (Pandas, NumPy)</span>
-        <span class="tag">Matplotlib / Seaborn</span>
+        <span class="tag">Pandas</span>
+        <span class="tag">NumPy</span>
+        <span class="tag">Matplotlib</span>
+        <span class="tag">Seaborn</span>
         <span class="tag">Jupyter Notebooks</span>
-        <span class="tag">R</span>
       </div>
     </div>
 
     <div class="skill-category">
       <div class="skill-cat-header">
         <div class="skill-cat-icon">📊</div>
-        <div class="skill-cat-title">BI & Visualization</div>
+        <div class="skill-cat-title">BI & Dashboards</div>
       </div>
       <div class="skill-tags">
         <span class="tag">Power BI</span>
         <span class="tag">Tableau</span>
         <span class="tag">Looker Studio</span>
-        <span class="tag">DAX / M Query</span>
-      </div>
-    </div>
-
-    <div class="skill-category">
-      <div class="skill-cat-header">
-        <div class="skill-cat-icon">☁️</div>
-        <div class="skill-cat-title">Cloud & ETL</div>
-      </div>
-      <div class="skill-tags">
-        <span class="tag">Google Cloud (GCP)</span>
-        <span class="tag">Azure Fundamentals</span>
-        <span class="tag">dbt</span>
-        <span class="tag">Apache Airflow</span>
+        <span class="tag">DAX</span>
+        <span class="tag">M Query</span>
       </div>
     </div>
 
@@ -263,9 +246,9 @@
         <div class="skill-cat-title">Analytics & Modeling</div>
       </div>
       <div class="skill-tags">
+        <span class="tag">Exploratory Data Analysis</span>
         <span class="tag">Statistical Analysis</span>
         <span class="tag">Financial Modeling</span>
-        <span class="tag">Regression Analysis</span>
         <span class="tag">Forecasting</span>
         <span class="tag">A/B Testing</span>
       </div>
@@ -281,6 +264,7 @@
         <span class="tag">Data Storytelling</span>
         <span class="tag">Stakeholder Communication</span>
         <span class="tag">Problem-Solving</span>
+        <span class="tag">Report Writing</span>
       </div>
     </div>
 
@@ -297,25 +281,25 @@
 
     <div class="project-card">
       <div class="project-img"><span>📊</span>Project Screenshot</div>
-      <div class="project-cat">SQL · Data Exploration</div>
+      <div class="project-cat">SQL · Exploratory Analysis</div>
       <div class="project-title">Banking Customer Analysis</div>
-      <div class="project-desc">Exploratory SQL analysis of customer transaction patterns using banking data. Identifies high-value segments, churn indicators, and seasonal trends across branch operations.</div>
+      <div class="project-desc">SQL-based analysis of customer transaction patterns across a banking dataset. Identifies high-value segments, inactive accounts, and seasonal deposit trends to guide branch strategy.</div>
       <div class="project-tools">
         <span class="tag">SQL</span><span class="tag">PostgreSQL</span><span class="tag">Excel</span>
       </div>
       <div class="project-links">
         <a href="#" class="project-link">GitHub →</a>
-        <a href="#" class="project-link">Live Report →</a>
+        <a href="#" class="project-link">Report →</a>
       </div>
     </div>
 
     <div class="project-card">
       <div class="project-img"><span>🐍</span>Project Screenshot</div>
       <div class="project-cat">Python · EDA</div>
-      <div class="project-title">Ethiopian Economic Indicators Dashboard</div>
-      <div class="project-desc">Exploratory analysis of GDP, inflation, and employment trends using World Bank datasets. Built with Pandas and visualized with Matplotlib and Seaborn.</div>
+      <div class="project-title">Ethiopian Economic Indicators Analysis</div>
+      <div class="project-desc">Exploratory analysis of GDP, inflation, and employment trends over a decade using World Bank open data. Surfaces correlations and anomalies with clean visual storytelling.</div>
       <div class="project-tools">
-        <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Matplotlib</span>
+        <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span>
       </div>
       <div class="project-links">
         <a href="#" class="project-link">GitHub →</a>
@@ -326,8 +310,8 @@
     <div class="project-card">
       <div class="project-img"><span>📈</span>Dashboard Screenshot</div>
       <div class="project-cat">Power BI · BI Dashboard</div>
-      <div class="project-title">Sales Performance BI Dashboard</div>
-      <div class="project-desc">End-to-end BI dashboard with KPIs, time-series trends, and drill-through reports. Tracks revenue, targets, and regional performance for a retail business.</div>
+      <div class="project-title">Retail Sales Performance Dashboard</div>
+      <div class="project-desc">Interactive Power BI dashboard tracking revenue, targets, and regional performance. Features time-series KPIs, drill-through reports, and dynamic filtering by product category and period.</div>
       <div class="project-tools">
         <span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">SQL</span>
       </div>
@@ -338,16 +322,16 @@
     </div>
 
     <div class="project-card">
-      <div class="project-img"><span>🚀</span>Project Screenshot</div>
-      <div class="project-cat">End-to-End Pipeline · Cloud</div>
-      <div class="project-title">Financial Data Pipeline (ETL + BI)</div>
-      <div class="project-desc">Full data pipeline: raw financial data ingested, cleaned with dbt, loaded to BigQuery, and visualized in Looker Studio. Automated with Airflow and deployed on GCP.</div>
+      <div class="project-img"><span>💼</span>Project Screenshot</div>
+      <div class="project-cat">Tableau · Business Intelligence</div>
+      <div class="project-title">HR Analytics Dashboard</div>
+      <div class="project-desc">Tableau dashboard analyzing workforce data — headcount trends, attrition rates, department-level performance, and salary distribution. Designed to support HR decision-making at a glance.</div>
       <div class="project-tools">
-        <span class="tag">dbt</span><span class="tag">BigQuery</span><span class="tag">Looker Studio</span><span class="tag">Airflow</span>
+        <span class="tag">Tableau</span><span class="tag">Excel</span><span class="tag">Python</span>
       </div>
       <div class="project-links">
         <a href="#" class="project-link">GitHub →</a>
-        <a href="#" class="project-link">Write-up →</a>
+        <a href="#" class="project-link">Live Dashboard →</a>
       </div>
     </div>
 
@@ -361,7 +345,6 @@
   <div class="section-label">Experience</div>
   <h2>Work History</h2>
   <div class="timeline">
-
     <div class="timeline-item">
       <div class="timeline-dot current"></div>
       <div class="tl-header">
@@ -373,13 +356,12 @@
       </div>
       <div class="tl-desc">
         <ul>
-          <li>Delivered professional banking services and supported daily branch operations.</li>
-          <li>Handled customer inquiries, account transactions, and documentation with accuracy and efficiency.</li>
-          <li>Independently managed full front desk operations within 30 days — demonstrating strong operational agility and digital literacy.</li>
+          <li>Handled customer data, account transactions, and financial documentation daily — building strong data accuracy habits in a live financial environment.</li>
+          <li>Observed patterns in customer behavior and branch operations, developing an instinct for translating operational data into actionable observations.</li>
+          <li>Managed full front desk operations independently within 30 days, demonstrating fast adaptability and digital proficiency.</li>
         </ul>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -389,41 +371,10 @@
 <section id="education">
   <div class="section-label">Education</div>
   <h2>Academic Background</h2>
-  <div class="edu-card" style="max-width:480px;">
+  <div class="edu-card">
     <div class="edu-degree">Bachelor of Arts (BA) in Economics</div>
     <div class="edu-school">Bahir Dar University</div>
     <div class="edu-detail">2022 – 2025 &nbsp;·&nbsp; Bahir Dar, Ethiopia</div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- CERTIFICATIONS -->
-<section id="certifications">
-  <div class="section-label">Recognition</div>
-  <h2>Certifications & Awards</h2>
-  <div class="cert-list">
-    <div class="cert-item">
-      <div class="cert-icon">🏅</div>
-      <div>
-        <div class="cert-title">Community Leadership Award</div>
-        <div class="cert-org">Bahir Dar University Students' Union — 2025</div>
-      </div>
-    </div>
-    <div class="cert-item">
-      <div class="cert-icon">🌍</div>
-      <div>
-        <div class="cert-title">Peace Education Certification</div>
-        <div class="cert-org">Bahir Dar University × British Council × European Union — 2024</div>
-      </div>
-    </div>
-    <div class="cert-item">
-      <div class="cert-icon">❤️</div>
-      <div>
-        <div class="cert-title">Humanitarian Service Recognition</div>
-        <div class="cert-org">Zigba Children and Elders Support Organization — 2025</div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -434,7 +385,7 @@
   <div class="contact-wrapper">
     <div class="section-label" style="text-align:center;">Get In Touch</div>
     <h2 style="text-align:center;">Let's Work Together</h2>
-    <p>Open to data analyst, BI, and data engineer roles — as well as freelance projects. Feel free to reach out.</p>
+    <p>Open to Data Analyst and BI roles, freelance projects, and consulting. Feel free to reach out.</p>
     <div class="contact-links">
       <a href="mailto:yilakabay3@gmail.com" class="contact-link">📧 Email Me</a>
       <a href="tel:+251985576139" class="contact-link">📞 +251 985 576 139</a>
