@@ -59,7 +59,11 @@
   /* ---------- Hero ---------- */
   .hero{
     position:relative;
-    background:linear-gradient(160deg,var(--navy-deep) 0%,var(--navy) 55%,var(--navy-soft) 100%);
+    background:
+      linear-gradient(160deg, rgba(6,24,48,0.93) 0%, rgba(10,35,66,0.90) 55%, rgba(19,51,92,0.88) 100%),
+      url('banner.jpg');
+    background-size:cover;
+    background-position:center;
     color:var(--white);
     overflow:hidden;
     padding:96px 0 110px;
@@ -294,7 +298,7 @@
       </div>
       <div class="portrait-frame">
         <div class="portrait-ring"></div>
-        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+        <img src="profile.jpg" alt="Yilak Abay Abebe">
       </div>
     </div>
   </section>
@@ -532,8 +536,8 @@
   navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
   navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 
-  // LinkedIn link placeholder — replace LINKEDIN_URL below once provided.
-  const linkedinUrl = ""; // e.g. "https://www.linkedin.com/in/yourprofile"
+  // LinkedIn profile link
+  const linkedinUrl = "https://www.linkedin.com/in/yilak-abay-9223543b4";
   if (linkedinUrl) {
     const item = document.getElementById('linkedin-item');
     const a = document.createElement('a');
